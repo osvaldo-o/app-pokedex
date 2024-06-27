@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AppPokedex</string>
+    <string name="image_pokemon">Image pokemon</string>
+    <string name="title_home_screen">Pokedex</string>
+    <string name="error_message">Sucedio un error inesperado</string>
+    <string name="favorite_icon">Favorite icon</string>
+    <string name="url_base_image">https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/</string>
 </resources>
