@@ -24,7 +24,7 @@ import fes.aragon.apppokedex.ui.components.TopBar
 
 @Composable
 fun HomeScreen(
-    navDetailScreen: (String) -> Unit,
+    navDetailScreen: (Int) -> Unit,
     navFavoriteScreen: () -> Unit,
     uiState: HomeState
 ) {
@@ -59,7 +59,7 @@ fun HomeScreen(
 @Composable
 fun HomeContent(
     pokemonList: List<PokemonApi>,
-    navDetailScreen: (String) -> Unit
+    navDetailScreen: (Int) -> Unit
 ) {
     LazyColumn(
         Modifier
@@ -71,7 +71,7 @@ fun HomeContent(
             ItemPokemon(
                 name = item.name,
                 urlImage = stringResource(id = R.string.url_base_image)+"${index+1}.png",
-                onClick = { navDetailScreen(item.name) }
+                onClick = { navDetailScreen(index+1) }
             )
         }
     }

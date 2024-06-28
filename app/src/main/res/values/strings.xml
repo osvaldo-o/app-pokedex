@@ -4,5 +4,13 @@
     <string name="title_home_screen">Pokedex</string>
     <string name="error_message">Sucedio un error inesperado</string>
     <string name="favorite_icon">Favorite icon</string>
+    <string name="icon_back">icon back</string>
+    <string name="icon_favorite">icon favorite</string>
+    <string name="base_experience">Base experience</string>
+    <string name="delete_favorite">Eliminar de Favoritos</string>
+    <string name="add_favorite">Agregar a Favoritos</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="type">Type</string>
     <string name="url_base_image">https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/</string>
 </resources>

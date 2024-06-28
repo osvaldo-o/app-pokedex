@@ -4,15 +4,14 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class PokemonDetail(
-    val order: Int,
-    val name: String,
-    val base_experience: Int,
-    val weight: Int,
-    val height: Int,
-    val type: TypePokemon
+    val name: String = "",
+    val base_experience: Int = 0,
+    val weight: Int = 0,
+    val height: Int = 0,
+    val types: List<TypePokemon> = emptyList()
 )
 
 @Serializable
 data class TypePokemon(
-    val types: List<PokemonApi>
+   val type: PokemonApi
 )

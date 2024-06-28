@@ -11,8 +11,10 @@ import androidx.compose.ui.res.stringResource
 import fes.aragon.apppokedex.R
 
 @Composable
-fun ErrorScreen() {
-    Box(Modifier.fillMaxSize()) {
+fun ErrorScreen(
+    modifier: Modifier = Modifier
+) {
+    Box(modifier.fillMaxSize()) {
         Text(
             text = stringResource(id = R.string.error_message),
             style = MaterialTheme.typography.titleMedium,

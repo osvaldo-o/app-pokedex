@@ -15,8 +15,9 @@ class Repository @Inject constructor(
     private val pokemonDao: PokemonDao
 ) {
     suspend fun getPokemon(): List<PokemonApi> = pokeApiService.getPokemon().results
-    suspend fun getPokemonDetail(name: String): PokemonDetail = pokeApiService.getPokemonDetail(name)
+    suspend fun getPokemonDetail(id: Int): PokemonDetail = pokeApiService.getPokemonDetail(id)
     fun getPokemonFavorite(): Flow<List<PokemonEntity>> = pokemonDao.getPokemonFavorites()
+    suspend fun isPokemonFavorite(id: Int): Boolean = pokemonDao.isPokemonFavorite(id) > 0
     suspend fun insertPokemon(pokemonEntity: PokemonEntity) = pokemonDao.insertPokemon(pokemonEntity)
     suspend fun deletePokemon(pokemonEntity: PokemonEntity) = pokemonDao.deletePokemon(pokemonEntity)
 }

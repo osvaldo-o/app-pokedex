@@ -1,12 +1,10 @@
 package fes.aragon.apppokedex.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -31,19 +29,19 @@ fun ItemPokemon(
         modifier
             .fillMaxWidth()
             .clickable { onClick() },
-        colors = CardDefaults.cardColors(MaterialTheme.colorScheme.secondary),
-        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 10.dp)
+        colors = CardDefaults.cardColors(Color.White),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 16.dp)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
             modifier = Modifier
                 .fillMaxWidth()
         ) {
             AsyncImage(
                 model = urlImage,
                 contentDescription = stringResource(id = R.string.image_pokemon),
-                modifier = Modifier.height(100.dp).background(Color.Gray)
+                modifier = Modifier.height(100.dp)
             )
             Text(
                 text = name.replaceFirstChar { char -> char.uppercase() },

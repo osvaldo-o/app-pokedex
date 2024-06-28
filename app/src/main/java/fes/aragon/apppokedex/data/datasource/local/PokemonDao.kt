@@ -19,4 +19,7 @@ interface PokemonDao {
     @Query("SELECT * FROM pokemon_favorite")
     fun getPokemonFavorites(): Flow<List<PokemonEntity>>
 
+    @Query("SELECT COUNT(*) FROM pokemon_favorite WHERE id = :id")
+    suspend fun isPokemonFavorite(id: Int): Int
+
 }
