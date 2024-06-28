@@ -8,11 +8,15 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import fes.aragon.apppokedex.R
@@ -33,10 +37,14 @@ fun HomeScreen(
             TopBar(title = stringResource(id = R.string.title_home_screen))
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = navFavoriteScreen) {
+            FloatingActionButton(
+                onClick = navFavoriteScreen,
+                containerColor = MaterialTheme.colorScheme.primary
+            ) {
                 Icon(
                     imageVector = Icons.Default.Favorite,
-                    contentDescription = stringResource(id = R.string.favorite_icon)
+                    contentDescription = stringResource(id = R.string.favorite_icon),
+                    tint = Color.White
                 )
             }
         }

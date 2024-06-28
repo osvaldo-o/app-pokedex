@@ -17,6 +17,7 @@ import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -139,7 +140,8 @@ fun DetailContent(
                 InfoView(key = stringResource(id = R.string.type), value = getTypeString(pokemon.types))
                 Button(
                     onClick = { if (isFavorite) onEvent(DetailEvent.DeleteFavorite(pokemon.name)) else onEvent(DetailEvent.AddFavorite(pokemon.name)) },
-                    modifier = Modifier.padding(top = 12.dp)
+                    modifier = Modifier.padding(top = 12.dp),
+                    colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.secondary)
                 ) {
                     Text(
                         text = if(isFavorite) stringResource(id = R.string.delete_favorite) else stringResource(id = R.string.add_favorite),

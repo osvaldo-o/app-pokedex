@@ -2,6 +2,7 @@
     <string name="app_name">AppPokedex</string>
     <string name="image_pokemon">Image pokemon</string>
     <string name="title_home_screen">Pokedex</string>
+    <string name="title_favorite_screen">Favoritos</string>
     <string name="error_message">Sucedio un error inesperado</string>
     <string name="favorite_icon">Favorite icon</string>
     <string name="icon_back">icon back</string>
@@ -9,6 +10,7 @@
     <string name="base_experience">Base experience</string>
     <string name="delete_favorite">Eliminar de Favoritos</string>
     <string name="add_favorite">Agregar a Favoritos</string>
+    <string name="message_empty_favorire">No has agregado ningún Pokemon favorito</string>
     <string name="height">Height</string>
     <string name="weight">Weight</string>
     <string name="type">Type</string>
